@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uniformes</title>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-indigo-600 hover:text-indigo-800">
+                Almacen Virutal
+            </a>
+
+            <div class="hidden md:flex space-x-6 text-lg">
+                <a href="index.html" class="text-gray-600 hover:text-indigo-600">Inicio</a>
+                <a href="contacto.html" class="text-gray-600 hover:text-indigo-600">Contacto</a>
+            </div>
+
+            <button class="md:hidden p-2" id="mobile-menu-button">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Menú móvil -->
+        <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
+            <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Inicio</a>
+            <a href="contacto.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Contacto</a>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- TÍTULO -->
+        <section id="inicio" class="text-center mb-16 bg-white p-8 rounded-xl shadow-lg">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-indigo-600 mb-4">
+                    UNIFORMES
+                </h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+                    Presguntanos por el uniforme que deseas, hacemos todo tipo de prendas personalizadas, con escudos de centros educativos y más.
+                </p>
+
+        <!-- CONTENEDORES DE PRODUCTOS (5 por fila) -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+
+            <!-- PRODUCTO 1 -->
+            <div class="bg-white shadow-md rounded-xl p-4 text-center">
+                <div class="w-full h-40 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
+                    <span class="text-gray-400 text-sm">Imagen aquí</span>
+                </div>
+                <h3 class="font-semibold text-gray-700">Nombre del producto</h3>
+                <p class="text-sm text-gray-500">Breve descripción del producto.</p>
+            </div>
+
+            <!-- PRODUCTO 2 -->
+            <div class="bg-white shadow-md rounded-xl p-4 text-center">
+                <div class="w-full h-40 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
+                    <span class="text-gray-400 text-sm">Imagen aquí</span>
+                </div>
+                <h3 class="font-semibold text-gray-700">Nombre del producto</h3>
+                <p class="text-sm text-gray-500">Breve descripción del producto.</p>
+            </div>
+
+            <!-- Copia estos bloques para más productos -->
+            <div class="bg-white shadow-md rounded-xl p-4 text-center">
+                <div class="w-full h-40 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
+                    <span class="text-gray-400 text-sm">Imagen aquí</span>
+                </div>
+                <h3 class="font-semibold text-gray-700">Nombre del producto</h3>
+                <p class="text-sm text-gray-500">Breve descripción del producto.</p>
+            </div>
+
+            <div class="bg-white shadow-md rounded-xl p-4 text-center">
+                <div class="w-full h-40 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
+                    <span class="text-gray-400 text-sm">Imagen aquí</span>
+                </div>
+                <h3 class="font-semibold text-gray-700">Nombre del producto</h3>
+                <p class="text-sm text-gray-500">Breve descripción del producto.</p>
+            </div>
+
+            <div class="bg-white shadow-md rounded-xl p-4 text-center">
+                <div class="w-full h-40 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
+                    <span class="text-gray-400 text-sm">Imagen aquí</span>
+                </div>
+                <h3 class="font-semibold text-gray-700">Nombre del producto</h3>
+                <p class="text-sm text-gray-500">Breve descripción del producto.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p class="text-sm">&copy; 2025 Mi Proyecto Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JavaScript Menú móvil -->
+    <script>
+        const btn = document.getElementById("mobile-menu-button");
+        const menu = document.getElementById("mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

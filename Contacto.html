@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración fundamental de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Ventas</title>
+
+    <!-- Carga del CDN de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex-grow: 1;
+        }
+        .btn {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+        }
+        /* Estilo específico para el botón de WhatsApp */
+        .whatsapp-btn {
+            background-color: #25D366; /* Verde de WhatsApp */
+            color: white;
+            padding: 1rem 1.5rem;
+            font-size: 1.125rem;
+            font-weight: bold;
+            border-radius: 0.75rem;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .whatsapp-btn:hover {
+            background-color: #1EBE5A;
+            transform: translateY(-2px);
+        }
+        /* Contenedor responsivo para el mapa */
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+            position: relative;
+            height: 0;
+        }
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- 1. ENCABEZADO (HEADER) -->
+    <header class="bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo o Nombre del Sitio -->
+            <a href="index.html" class="text-xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-150">
+                Almacen Virtual
+            </a>
+            
+            <!-- Elementos de Navegación (Ej. para desktop) -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <!-- ENLACE DE VUELTA A LA PÁGINA PRINCIPAL (TEXTO CORREGIDO: Inicio -> apunta a index.html) -->
+                <a href="index.html" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-150">Inicio</a>
+                <a href="#empresa" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-150">La Empresa</a>
+                <!-- Enlace al mapa -->
+                <a href="#mapa" class="btn px-4 py-2 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 text-sm">
+                    Ver Ubicación
+                </a>
+            </div>
+
+            <!-- Botón de Menú (Ej. para mobile/tablet) -->
+            <button class="md:hidden p-2 rounded-md hover:bg-gray-100 transition duration-150" id="mobile-menu-button">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Menú Móvil Desplegable (Inicialmente oculto) -->
+        <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
+            <!-- ENLACE DE VUELTA A LA PÁGINA PRINCIPAL (TEXTO CORREGIDO: Inicio -> apunta a index.html) -->
+            <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Inicio</a>
+            <a href="#empresa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">La Empresa</a>
+            <a href="#mapa" class="block px-4 py-2 text-sm text-indigo-600 hover:bg-indigo-50 border-t border-gray-100">Ver Ubicación</a>
+        </div>
+    </header>
+
+
+    <!-- 2. CONTENIDO PRINCIPAL (MAIN) -->
+    <main>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            
+            <h1 class="text-4xl font-extrabold text-gray-900 text-center mb-10">
+                Contacto
+            </h1>
+
+            <!-- SECCIÓN 0: BOTÓN DE WHATSAPP DESTACADO -->
+            <section class="text-center mb-12">
+                <!-- ATENCIÓN: Reemplaza el número de teléfono (573100000000) y el mensaje de WhatsApp. 
+                     El formato es 'teléfono' (sin +) y 'texto' URL-encodeado. -->
+                <a href="https://wa.me/573183838048?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20productos%20y%20servicios." 
+                   target="_blank" 
+                   class="whatsapp-btn flex items-center justify-center mx-auto max-w-sm">
+                    <!-- Icono de WhatsApp (SVG) -->
+                    <svg class="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 2.31a9.75 9.75 0 00-8.342 14.619l-1.465 4.672a.75.75 0 00.992.993l4.672-1.465a9.75 9.75 0 0014.619-8.342 9.75 9.75 0 00-9.75-9.75zm0 18.062a8.25 8.25 0 01-4.225-1.157l-.3-.178-3.033.953.971-2.932-.191-.302a8.25 8.25 0 1111.411-10.428 8.25 8.25 0 01-4.633 4.633zm3.766-5.895l-.216-.108a.711.711 0 00-.462-.164c-.164 0-.328.053-.473.149l-1.076.637a.389.389 0 01-.397.026c-.848-.387-2.313-1.418-3.238-2.91a4.9 4.9 0 01-.137-.406.495.495 0 01.191-.564c.059-.044.116-.076.164-.132l.745-.96a.434.434 0 00.088-.352c-.015-.052-.04-.117-.074-.183l-.683-1.666c-.074-.176-.148-.258-.222-.293a.362.362 0 00-.285-.015l-.26.026a.547.547 0 00-.317.158c-.149.169-.404.484-.572.71a2.91 2.91 0 00-.374.654 4.881 4.881 0 00.56 3.655c.294.483.748.97 1.353 1.503 1.258 1.096 2.508 1.838 3.52 2.152.285.088.59.132.89.132.41 0 .736-.088 1.018-.164.285-.076.643-.222.844-.396.182-.169.34-.397.397-.587l.034-.093c.03-.093.03-.221.03-.397z"/></svg>
+                    Chatea con Ventas por WhatsApp
+                </a>
+                <p class="mt-4 text-sm text-gray-500">Respuesta más rápida: Horario hábil.</p>
+            </section>
+            
+            <!-- SECCIÓN DE UBICACIÓN Y CONTACTO RÁPIDO -->
+            <section id="info" class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12">
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-indigo-600 mb-3">
+                        <!-- Icono de Teléfono -->
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2 text-lg">Llámanos</h3>
+                    <p class="text-gray-600 font-semibold">(+57) 318 383 8048</p>
+                    <p class="text-sm text-gray-500">Lun-Vie: 8:00am a 12:00pm y de 2:00pm a 5:00pm.</p>
+                    <p class="text-sm text-gray-500"> Sab: 8:00am - 12:00pm</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-indigo-600 mb-3">
+                        <!-- Icono de Email -->
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2 text-lg">Correo Electrónico</h3>
+                         <a href="mailto:dotacionespanther@gmail.com" 
+                            class="text-sm text-gray-600 font-semibold hover:text-indigo-600">
+                            dotacionespanther@gmail.com
+                         </a>
+                    <p class="text-sm text-gray-500">Para consultas generales.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-indigo-600 mb-3">
+                        <!-- Icono de Ubicación -->
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2 text-lg">Nuestra Tienda fisica</h3>
+                    <p class="text-sm text-gray-600 font-semibold">Carrera 30 # 38-03, Esquina</p>
+                    <p class="text-sm text-gray-500">Palmira, Valle del Cauca</p>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 2: DATOS DE LA EMPRESA Y VALORES -->
+            <section id="empresa" class="bg-indigo-50 p-8 rounded-xl shadow-inner mb-12">
+                <h2 class="text-3xl font-bold text-indigo-800 mb-6 text-center">
+                    Acerca de Nuestra Empresa
+                </h2>
+                <div class="text-gray-700 space-y-4">
+                    <p>
+                        Somos una empresa fsmiliaar que en la ultima decada se ha estado especializando en la confeccion y desarrollo de todo tipo de uniformes para centros educativos, universidaeds y escuelas de deporte. asi mismo, hemos estado desarrolando uniformes para mpresas y profesionales de la salud, entre otros.
+                    <p class="font-semibold text-indigo-700">Valores Fundamentales:</p>
+                    <ul class="list-disc list-inside space-y-1 pl-4 text-sm">
+                        <li>**Calidad Superior:** Uso de materiales duraderos y procesos de fabricación rigurosos.</li>
+                        <li>**Servicio al Cliente:** Atención personalizada y soluciones a medida para cada cliente.</li>
+                        <li>**Compromiso Social:** Prácticas éticas y sostenibles en toda nuestra cadena de suministro.</li>
+                        <li>**Innovación:** Búsqueda constante de nuevos diseños y tecnologías textiles.</li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <!-- NUEVA SECCIÓN 3: MAPA DE UBICACIÓN -->
+            <section id="mapa" class="mb-12">
+                <h2 class="text-2xl font-semibold text-indigo-600 mb-6 border-b pb-2 text-center">
+                    Encuéntranos en el Mapa
+                </h2>
+                <!--
+                    NOTA IMPORTANTE: Para que el mapa funcione con tu dirección exacta,
+                    debes obtener el código 'iframe' de Google Maps y reemplazar el 'src'
+                    que está abajo. Este es un mapa de ejemplo de Bogotá.
+                -->
+                <div class="map-container rounded-xl shadow-xl">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2815.858142830487!2d-76.30053031414796!3d3.535511554030508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3a04eb8d76b7c1%3A0x935d946cb330cf4f!2sCl.%2038%20%23%2030-19%2C%20Palmira%2C%20Valle%20del%20Cauca%2C%20Colombia!5e0!3m2!1ses!2ses!4v1764358708054!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación de la empresa en Palmira"
+                    ></iframe>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <!-- 4. PIE DE PÁGINA (FOOTER) -->
+    <footer class="bg-gray-800 text-white mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p class="text-sm">&copy; 2025 Mi Proyecto Web. Todos los derechos reservados.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-150 text-sm">Política de Privacidad</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-150 text-sm">Términos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LÓGICA JAVASCRIPT para el Menú Móvil -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Ocultar menú móvil después de hacer clic en un enlace
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
