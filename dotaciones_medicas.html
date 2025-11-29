@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotaciones Médicas - Mi Proyecto Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex-grow: 1;
+        }
+        .product-card {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-indigo-600 hover:text-indigo-800 transition">Tu Marca</a>
+
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-gray-600 hover:text-indigo-600 font-medium">Inicio</a>
+                <a href="contacto.html" class="text-gray-600 hover:text-indigo-600 font-medium">Contacto</a>
+            </div>
+
+            <button class="md:hidden p-2 rounded-md hover:bg-gray-100" id="mobile-menu-button">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
+            <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Inicio</a>
+            <a href="contacto.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Contacto</a>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 class="text-4xl font-extrabold text-gray-900 text-center mb-10">
+            Dotaciones Médicas
+        </h1>
+
+        <!-- GRID 5 POR FILA -->
+        <section class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+
+            <!-- REPITE ESTOS PRODUCTOS PARA AGREGAR MÁS -->
+
+            <div class="product-card">
+                <img src="https://placehold.co/200x200?text=Producto+1" class="rounded-lg w-full h-auto mb-2">
+                <p class="font-semibold text-gray-700 text-sm">Producto 1</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/200x200?text=Producto+2" class="rounded-lg w-full h-auto mb-2">
+                <p class="font-semibold text-gray-700 text-sm">Producto 2</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/200x200?text=Producto+3" class="rounded-lg w-full h-auto mb-2">
+                <p class="font-semibold text-gray-700 text-sm">Producto 3</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/200x200?text=Producto+4" class="rounded-lg w-full h-auto mb-2">
+                <p class="font-semibold text-gray-700 text-sm">Producto 4</p>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/200x200?text=Producto+5" class="rounded-lg w-full h-auto mb-2">
+                <p class="font-semibold text-gray-700 text-sm">Producto 5</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p class="text-sm">&copy; 2025 Mi Proyecto Web. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MOBILE MENU JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
