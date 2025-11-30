@@ -56,53 +56,70 @@
             <!-- PRODUCTO 1 -->
             <div class="bg-white shadow-md rounded-xl p-4 text-center">
                 <div class="w-full h-40 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
-                    <span class="text-gray-400 text-sm">Imagen aquí</span>
+                <img src="imgs/unf1.jpg" class="rounded-lg w-full h-40 object-cover object-center mb-2 transition-transform duration-300 transform hover:scale-105" onclick="openImage(this.src)">
                 </div>
-                <h3 class="font-semibold text-gray-700">Nombre del producto</h3>
-                <p class="text-sm text-gray-500">Breve descripción del producto.</p>
+                <h3 class="font-semibold text-gray-700">Uniforme colegio o universidad</h3>
+                <p class="text-sm text-gray-500">hacemos todo tipo de uniformes.</p>
             </div>
 
             <!-- PRODUCTO 2 -->
             <div class="bg-white shadow-md rounded-xl p-4 text-center">
                 <div class="w-full h-40 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
-                    <span class="text-gray-400 text-sm">Imagen aquí</span>
+                <img src="imgs/unf3.jpg" class="rounded-lg w-full h-40 object-cover object-center mb-2 transition-transform duration-300 transform hover:scale-105" onclick="openImage(this.src)">
                 </div>
-                <h3 class="font-semibold text-gray-700">Nombre del producto</h3>
-                <p class="text-sm text-gray-500">Breve descripción del producto.</p>
+                <h3 class="font-semibold text-gray-700">Uniforme colegio o universidad</h3>
+                <p class="text-sm text-gray-500">hacemos todo tipo de uniformes.</p>
             </div>
 
-            <!-- Copia estos bloques para más productos -->
+            <!-- producto 3 -->
             <div class="bg-white shadow-md rounded-xl p-4 text-center">
                 <div class="w-full h-40 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
-                    <span class="text-gray-400 text-sm">Imagen aquí</span>
+                <img src="imgs/unf6.jpg" class="rounded-lg w-full h-40 object-cover object-center mb-2 transition-transform duration-300 transform hover:scale-105" onclick="openImage(this.src)">
                 </div>
-                <h3 class="font-semibold text-gray-700">Nombre del producto</h3>
-                <p class="text-sm text-gray-500">Breve descripción del producto.</p>
-            </div>
-
-            <div class="bg-white shadow-md rounded-xl p-4 text-center">
-                <div class="w-full h-40 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
-                    <span class="text-gray-400 text-sm">Imagen aquí</span>
-                </div>
-                <h3 class="font-semibold text-gray-700">Nombre del producto</h3>
-                <p class="text-sm text-gray-500">Breve descripción del producto.</p>
+                <h3 class="font-semibold text-gray-700">Uniforme colegio o universidad</h3>
+                <p class="text-sm text-gray-500">hacemos todo tipo de uniformes.</p>
             </div>
 
             <div class="bg-white shadow-md rounded-xl p-4 text-center">
                 <div class="w-full h-40 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
-                    <span class="text-gray-400 text-sm">Imagen aquí</span>
+                <img src="imgs/unf5.jpg" class="rounded-lg w-full h-40 object-cover object-center mb-2 transition-transform duration-300 transform hover:scale-105" onclick="openImage(this.src)">
                 </div>
-                <h3 class="font-semibold text-gray-700">Nombre del producto</h3>
-                <p class="text-sm text-gray-500">Breve descripción del producto.</p>
+                <h3 class="font-semibold text-gray-700">Uniforme colegio o universidad</h3>
+                <p class="text-sm text-gray-500">hacemos todo tipo de uniformes.</p>
+            </div>
+
+            <div class="bg-white shadow-md rounded-xl p-4 text-center">
+                <div class="w-full h-40 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
+                <img src="imgs/unf4.jpg" class="rounded-lg w-full h-40 object-cover object-center mb-2 transition-transform duration-300 transform hover:scale-105" onclick="openImage(this.src)">
+                </div>
+                <h3 class="font-semibold text-gray-700">Uniforme colegio o universidad</h3>
+                <p class="text-sm text-gray-500">hacemos todo tipo de uniformes.</p>
             </div>
 
         </section>
 
     </main>
 
+      <!-- Lightbox -->
+<div id="image-lightbox" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+    <img id="lightbox-img" class="max-w-[90%] max-h-[90%] rounded-lg shadow-xl">
+</div>
+
+<script>
+function openImage(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("image-lightbox").classList.remove("hidden");
+}
+
+// Cerrar el lightbox al hacer click en el fondo
+document.getElementById("image-lightbox").addEventListener("click", function () {
+    this.classList.add("hidden");
+});
+</script>
+
     <!-- FOOTER -->
     <footer class="bg-gray-800 text-white py-6 text-center">
-        <p class="text-sm">&copy; 2025 Mi Proyecto Web. Todos los derechos reservados.</p>
+        <p class="text-sm">&copy; 2025 DOTACIONES PANTHER.</p>
     </footer>
 
     <!-- JavaScript Menú móvil -->
@@ -114,5 +131,6 @@
             menu.classList.toggle("hidden");
         });
     </script>
+  
 </body>
 </html>
